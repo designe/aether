@@ -17,8 +17,17 @@
         {{ .Content }}
       </article>
       <!--
-      If you're going to use DISQUS comments, insert code here.
-      -->
+       disqus comment
+        -->
+      {{- if .Site.disqusShortname }}
+      {{ template "_internal/disqus.html" . }}
+      {{- end }}
+      <!--
+      Google Analytics
+        -->
+      {{- if .Site.googleAnalytics }}
+      {{ template "_internal/google_analytics.html" . }}
+      {{- end }}
     </main>
     <nav class="end-nav side-padding">
       {{ with .PrevInSection }}
