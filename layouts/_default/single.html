@@ -19,13 +19,13 @@
       <!--
        disqus comment
         -->
-      {{- if .Site.disqusShortname }}
+      {{- if .Site.DisqusShortname }}
       {{ template "_internal/disqus.html" . }}
       {{- end }}
       <!--
       Google Analytics
         -->
-      {{- if .Site.googleAnalytics }}
+      {{- if .Site.GoogleAnalytics }}
       {{ template "_internal/google_analytics.html" . }}
       {{- end }}
     </main>
